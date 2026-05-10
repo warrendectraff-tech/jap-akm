@@ -5,26 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>年齢確認は重要です！</title>
 
-    <script>
-window.onload = function () {
-    const elem = document.documentElement;
-
-    function enterFullscreen() {
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen().catch(() => {});
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-    }
-
-    // Try on load
-    enterFullscreen();
-
-    
-};
-</script>
+ 
    
     
 <!-- Google tag (gtag.js) -->
@@ -46,12 +27,13 @@ window.onload = function () {
     bottom: 0;
     left: 0;
     right: 0;
+            inset:0;
     z-index: 999999999;
     display: inline-block;
     background-color: rgba(0, 0, 0, 1);
     /* background-image: url(../images/bg1.jpg); */
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -61,6 +43,10 @@ window.onload = function () {
 }
 
 #agemodal .innerContain {
+    max-width:95vw;
+    max-height:95vh;
+    overflow:auto;
+
     background-color: #fff;
     color: #111111;
     padding: 60px 100px 50px;
@@ -108,13 +94,13 @@ window.onload = function () {
     transform: scale(1.1);
 }
         * {
-            margin: 4px;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         html, body {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             cursor: pointer;
         }
